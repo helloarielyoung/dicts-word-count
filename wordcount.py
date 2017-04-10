@@ -25,6 +25,13 @@ def get_word_list(file_name):
         #combine all words into one list
         all_the_words.extend(word)
 
+    #removing punctuation 
+    for i, word in enumerate(all_the_words):
+        if not word.isalpha():
+           all_the_words[i] = word[:-1]
+
+
+
     #create an empty dictionary to hold the words
     word_count = {}
 
@@ -36,4 +43,4 @@ def get_word_list(file_name):
         print "%s %d" % (word, count)
 
 get_word_list("test.txt")
-get_word_list("twain.txt")
+#get_word_list("twain.txt")
