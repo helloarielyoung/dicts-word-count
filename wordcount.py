@@ -32,9 +32,8 @@ def get_word_list(file_name):
     for word in all_the_words:
         word_count[word] = word_count.get(word, 0) + 1
 
-    return word_count
+    for word, count in word_count.iteritems():
+        print "%s %d" % (word, count)
 
-    #testing
-    print word_count
-
-
+get_word_list("test.txt")
+get_word_list("twain.txt")
