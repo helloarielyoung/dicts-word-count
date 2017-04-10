@@ -16,7 +16,7 @@ def wordcount(file_name):
         all_the_words.extend(word)
 
         #testing
-        print all_the_words
+    print all_the_words
     
 
 
